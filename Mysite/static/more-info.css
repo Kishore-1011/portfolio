@@ -9,6 +9,7 @@
 /* ------------------------------------------------------------custome---------------------------------------------------------- */
 #abt p{
 	color: white;
+	padding: 0px 10px;
     font-size: 1.4rem;
 }
 /* ------------------------------------------------------------custome---------------------------------------------------------- */
@@ -162,7 +163,7 @@ ul.timeline-list li:before {
 	text-align: center;
 	border-radius: 8px;
 	transition: 0.5s;
-	color:#fd5949;
+	color:#e63946;
 	box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.185);
 }
 
@@ -176,7 +177,7 @@ ul.timeline-list li:before {
 }
 .h-card:hover{
 	transform: scale(1.05);
-	background-color:#fd5949;
+	background-color:#e63946;
 	color: white;
 }
 
@@ -211,7 +212,7 @@ ul.timeline-list li:before {
 }
 #achive .row{
 	color: #e63946;
-	
+
 }
 
 #achive p {
