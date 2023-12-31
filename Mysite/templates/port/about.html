@@ -1,0 +1,26 @@
+{% extends 'port/home.html' %}
+{% block 'about' %}
+{% load static %}
+<!-- About Section -->
+<div id="about" class="container mt-5">
+    <div class="in-title"><h1>About Me</h1></div>
+    <div class="row">
+        <div class="col-lg-6 image-container d-none d-lg-block">
+            <img src="{% static 'about.png'%}" alt="About-Image" width="100%">
+        </div>
+        <div class="col-lg-6 content-section">
+            <div class="abt-content">
+                <br>
+                <p>"I am a results-oriented software developer skilled in many programming languages. Specializing in crafting efficient solutions, I thrive on complex challenges. With a commitment to continuous learning and innovation, I bring hands-on experience to create impactful applications. Let's collaborate on pushing technological boundaries for excellence and growth."</p>
+                <br>
+                <a href="{% url 'more_info' %}" class="more-info-button">
+                    <span class="button-icon"><i class="fas fa-info-circle"></i></span>
+                    More Info
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr class="my-4"/>
+</div>
+{% endblock %}

@@ -1,0 +1,191 @@
+{% extends 'port/base.html' %}
+{% load static %}
+{% block 'home' %}
+<link rel="stylesheet" href="{% static 'more-info.css' %}">
+    <div class="container mt-5 mx-auto text-center" id="abt">
+        <h1 class="title">About</h1>
+        <br>
+        <p>
+            "I am a results-oriented software developer proficient in a diverse range of programming languages.
+            Specializing in crafting efficient and scalable solutions, I thrive on tackling intricate challenges.
+            With a steadfast commitment to continuous learning and innovation, I bring extensive hands-on experience
+            to the table, enabling me to create impactful and cutting-edge applications. Let's collaborate on pushing
+            technological boundaries for excellence, innovation, and sustained growth."
+        </p>
+        <br>
+        <hr class="my-4" />
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="title text-center">Personal Info</h1>
+        <div class="row">
+            <div class="col-lg-6 order-lg-2 image-container d-none d-lg-block">
+                <img src="{% static 'personal-info.png' %}" alt="Home Image" width="100%" height="100%">
+            </div>
+            <div class="col-lg-6 order-lg-1 content-section">
+                <div class="info mt-5">
+                    <span><i class="fa-solid fa-user"></i></span><span> Name : Kishore Sathiyamoorthi</span>
+                    <br>
+                    <br>
+                    <span><i class="fa-solid fa-calendar-days"></i></span><span> Age : 22</span>
+                    <br>
+                    <br>
+                    <span><i class="fa-solid fa-venus-mars"></i></span><span> Gender : Male</span>
+                    <br>
+                    <br>
+                    <span><i class="fa-solid fa-phone"></i></span><span> Phone : 9150423259</span>
+                    <br>
+                    <br>
+                    <span><i class="fa-solid fa-envelope"></i></span><span> Mail : kishoresvd007@gmail.com</span>
+                    <br>
+                    <br>
+                    <span><i class="fa-solid fa-location-dot"></i></span><span> Location: Tirupur, Tamil Nadu</span>
+                    <br>
+                    <div class="media">
+                        <ul class="social-icons">
+                          <li><a class="mail" href="mailto:kishoresvd007@gmail.com"
+                            target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+                          <li><a class="linkedin" href="https://www.linkedin.com/in/kishore-s-279b27250"
+                            target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                          <li><a class="github" href="https://github.com/Kishore-1011" target="_blank"><i
+                            class="fab fa-github"></i></a></li>
+                          <li><a class="instagram" href="https://www.instagram.com/the._.lovie" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr class="my-4" />
+    </div>
+
+    <div class="experience pt-100 pb-100" id="experience">
+        <div class="container">
+            <h1 class="title text-center">Education & Experience</h1>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-xl-12">
+                    <ul class="timeline-list">
+                        <!-- Single Experience -->
+                        {% for education in educations.all %}
+                        <li>
+                            <div class="timeline_content">
+                                <span>{{ education.duration }}</span>
+                                <h3>{{ education.name }}</h3>
+                                <p>{{ education.description }}</p>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <hr class="my-4" />
+        </div>
+    </div>
+    <h1 class="title text-center">Hobbies/Intrests</h1>
+    <div class="container mt-5" id="hob">
+        <div class="h-card">
+            <i class="fa-solid fa-computer"></i>
+            <h1>Coding</h1>
+        </div>
+    
+        <div class="h-card">
+            <i class="fa-solid fa-medal"></i>
+            <h1>Sports</h1>
+        </div>
+    
+        <div class="h-card">
+            <i class="fa-solid fa-book-open"></i>
+            <h1>Reading</h1>
+        </div>
+    
+        <div class="h-card">
+            <i class="fa-solid fa-icons"></i>
+            <h1>Media</h1>
+        </div>
+    
+        <div class="h-card">
+            <i class="fa-solid fa-car-side"></i>
+            <h1>Traviling</h1>
+        </div>
+    
+        <div class="h-card">
+            <i class="fa-solid fa-seedling"></i>
+            <h1>Gardening</h1>
+        </div>
+    </div>
+    <div class="container">
+        <br>
+        <hr class="my-4"/>
+    </div>
+
+
+    <div class="container mt-5" id="achive">
+        <h1 class="title text-center">Achivements</h1>
+        <br>
+        <br>
+        {% for achivement in achivements.all %}
+        {% if achivement.id|divisibleby:2 %}
+        <div class="row">
+            <div class="col-md-6 d-none d-lg-flex">
+                <div class="img-container">
+                    <img src="{{ achivement.image.url }}" alt="Image 1" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h2>{{ achivement.name }}</h2>
+                    <p>{{ achivement.description }}</p>
+                    <button class="btn btn-danger view-button">View Image</button>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="row">
+            <div class="col-md-6 order-md-2 d-none d-lg-flex">
+                <div class="img-container">
+                    <img src="{{ achivement.image.url }}" alt="Image 2" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div>
+                    <h2>{{ achivement.name }}</h2>
+                    <p>{{ achivement.description}}</p>
+                    <button class="btn btn-danger view-button">View Image</button>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="container">
+        <hr class="my-4"/>
+    </div>
+    <div class="overlay-container" id="overlayContainer" onclick="closeOverlay()">
+        <img src="" alt="Overlay Image" class="overlay-img" id="overlayImg">
+    </div>
+
+
+
+    <script>
+        const viewButtons = document.querySelectorAll('.view-button');
+        const imgContainers = document.querySelectorAll('.img-container');
+        const overlayContainer = document.getElementById('overlayContainer');
+        const overlayImg = document.getElementById('overlayImg');
+    
+        function closeOverlay() {
+            overlayContainer.style.display = 'none';
+        }
+    
+        viewButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                overlayContainer.style.display = 'flex';
+                overlayImg.src = imgContainers[index].querySelector('img').src;
+                // button.style.display = 'none';
+            });
+        });
+    </script>
+{% endblock %}

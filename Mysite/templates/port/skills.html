@@ -1,0 +1,25 @@
+{% extends 'port/about.html' %}
+{% load static %}
+{% block 'skills' %}
+<!-- Skills Section -->
+<div id="skills" class="container mt-5">
+    <div class="in-title"><h1>Skills</h1></div>
+    <br>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+        {% for skill in skills.all %}
+        <div class="col mb-4">
+            <div class="card">
+                <div class="image">
+                    <img src="{{ skill.image.url }}" alt="skill-Image">
+                </div>
+                <div class="content">
+                    <h3> {{ skill.name }} </h3>
+                    <p> {{ skill.description }} </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <hr class="my-4"/>
+</div>
+{% endblock %}

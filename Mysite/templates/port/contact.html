@@ -1,0 +1,35 @@
+{% extends 'port/projects.html' %}
+{% load static %}
+{% block 'contact' %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+<div class="container mt-5" style="background-color: rgb(255, 255, 255, 0.151); border-radius: 15px;" id="contact">
+    <div class="cnt-container">
+        <div class="contain">
+            <div class="content">
+                <i class="fas fa-paper-plane rocket-icon"></i>
+                <h2>Don't Worry to! Contact Me</h2>
+                <p>Feel free to reach out if you have any questions or inquiries.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 image-container d-none d-lg-block">
+            <img src="{% static 'contact bg.png' %}"
+                alt="contact Image" width="100%">
+        </div>
+        <div class="col-lg-6 content-section">
+            <div class="container">
+                <!-- Contact form -->
+                <form method="post" style="margin-bottom: 10px; color:white">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <hr class="my-4" />
+</div>
+{% endblock %}
