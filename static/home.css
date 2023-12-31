@@ -103,7 +103,8 @@ body{
     display: flex;
 }
 .social-icons li {
-    margin-right: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 .social-icons a {
     text-decoration: none;
@@ -133,7 +134,7 @@ body{
 
 
 #about{
-    padding-top: 60px;
+    padding: 60px 25px 0px 25px;
 }
 
 .in-title h1{
@@ -156,7 +157,7 @@ body{
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
-    background-color: #457b9d;
+    background-color: #e63946;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -183,7 +184,7 @@ body{
     position: relative;
     height : 215px;
     background-color : #ffffff23;
-    margin : 50px 20px;
+    margin : 50px 10px;
     padding : 20px 15px;
     display : flex;
     flex-direction : column;
@@ -192,7 +193,7 @@ body{
     border-radius : 15px;
 }
 .container .card:hover {
-    height : 310px;
+    height : 320px;
 }
 .container .card .image {
     position : relative;
@@ -218,19 +219,20 @@ body{
 
 .container .card .content p{
     color: white;
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 1rem;
 }
 .container .card .content h3{
     color : #e63946;
     font-weight: 600;
+
 }
 
 .container .card .content {
     position : relative;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1rem;
     top : -140px;
-    padding : 10px 15px;
+    padding : 5px 5px;
     text-align : center;
     visibility : hidden;
     opacity : 0;
@@ -296,7 +298,7 @@ body{
 
 .cnt-container .contain .content {
     text-align: center;
-    
+
 }
 form{
     font-family: "Poppins", sans-serif;
@@ -317,13 +319,11 @@ form .btn{
 .form-control{
     font-size: 1.3rem;
     color: white;
-    background-color: #e63946;
-    /* background-color: #11111170; */
-    /* border: 1px solid black; */
+    background-color: #11111170;
     border: none;
 }
 .form-control:focus{
-    background-color: #fc0000e3;
+    background-color: #11111170;
     color: white;
 }
 
@@ -348,7 +348,7 @@ form .btn{
     align-items: center;
     flex-direction: column;
   }
-  
+
   .social-icon,
   .menu {
     position: relative;
@@ -356,14 +356,15 @@ form .btn{
     justify-content: center;
     align-items: center;
     margin: 10px 0;
+    padding: 0;
     flex-wrap: wrap;
   }
-  
+
   .social-icon__item,
   .menu__item {
     list-style: none;
   }
-  
+
   .social-icon__link {
     font-size: 2rem;
     color: #ffff;
@@ -374,7 +375,7 @@ form .btn{
   .social-icon__link:hover {
     transform: translateY(-10px);
   }
-  
+
   .menu__link {
     font-size: 1.2rem;
     color: #ffff;
@@ -384,12 +385,12 @@ form .btn{
     text-decoration: none;
     font-weight: 600;
   }
-  
+
   .menu__link:hover {
     opacity: 1;
     color: #e63946;
   }
-  
+
   .footer p {
     /* color: #fff; */
     margin: 15px 0 10px 0;
